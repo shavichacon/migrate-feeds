@@ -10,8 +10,8 @@ const publishAsync = function (registry, path, callback) {
     }, () => {
 
         let tgz = path + '.tgz'
-
-        npm.commands.publish([tgz], (err, data) => {
+        console.log('pushing...')
+        npm.commands.publish([path], (err, data) => {
 
             if (err) return callback(err);
 
